@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./chunks/framework.SXCkb8Xf.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{"comment":true},"headers":[],"relativePath":"comments.md","filePath":"comments.md","lastUpdated":1705245889000}'),o={name:"comments.md"};function s(c,n,m,r,d,p){return a(),t("div")}const f=e(o,[["render",s]]);export{i as __pageData,f as default};
