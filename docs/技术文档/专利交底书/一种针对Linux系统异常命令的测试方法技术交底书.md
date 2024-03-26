@@ -53,15 +53,40 @@ l 预期2：文件testfile1中不包含关键字“False”
 
 l 测试脚本内容如下：
 
-|                                                              |
-| :----------------------------------------------------------- |
-| #! /bin/bashecho True> testfile1 echo "【场景1】grep筛选到关键字True，输出结果："cat testfile1 \| grep True; echo -e "\n命令执行状态：$?"echo "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" echo "【场景2】grep未筛选到关键字False，输出结果："cat testfile1 \| grep False; echo -e "\n命令执行状态：$?"echo "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" echo "【场景3】grep筛选关键字Fasle时文件名称输入错误，输出结果："cat testfile2 \| grep False; echo -e "\n命令执行状态：$?"echo "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" |
+```bash
+#! /bin/bash 
+echo True> testfile1
+
+echo "【场景1】grep筛选到关键字True，输出结果："
+cat testfile1 | grep True; echo -e "\n命令执行状态：$?"
+echo "___________________"
+
+echo "【场景2】grep未筛选到关键字False，输出结果："
+cat testfile1 | grep False; echo -e "\n命令执行状态：$?"
+echo "___________________"
+
+echo "【场景3】grep筛选关键字Fasle时文件名称输入错误，输出结果："
+cat testfile2 | grep False; echo -e "\n命令执行状态：$?"
+echo "___________________"
+```
 
 执行以上脚本结果如下：
 
-|                                                              |
-| :----------------------------------------------------------- |
-| 【场景1】grep筛选到关键字，输出结果：True 命令执行状态码：**0**\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_【场景2】grep未筛选到关键字，输出结果： 命令执行状态码：**1**\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_【场景3】模拟场景2日志名称错误报错，输出结果：cat: testfile2: 没有那个文件或目录 命令执行状态码：**1** |
+```bash
+【场景1】grep筛选到关键字，输出结果：
+True
+
+命令执行状态码：0
+___________________
+【场景2】grep未筛选到关键字，输出结果：
+
+命令执行状态码：1
+___________________
+【场景3】模拟场景2日志名称错误报错，输出结果：
+cat: testfile2: 没有那个文件或目录
+
+命令执行状态码：1
+```
 
  
 
@@ -75,15 +100,34 @@ l 步骤：打印文件testfile1内容，同时把内容“True”替换为“Fa
 
 l 测试脚本内容如下：
 
-|                                                              |
-| :----------------------------------------------------------- |
-| #! /bin/bashecho True> testfile1 echo "【场景4】打印文件内容，并进行了数据处理，输出结果："cat testfile1 \| sed ‘s/True/False/g’; echo -e "\n命令执行状态：$?"echo "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" echo "【场景5】打印文件内容，并进行了数据处理，但文件名输入错误，输出结果："cat testfile2 \| sed ‘s/True/False/g’; echo -e "\n命令执行状态：$?"echo "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" rm  testfile1 |
+```bash
+#! /bin/bash 
+echo True> testfile1
+
+echo "【场景4】打印文件内容，并进行了数据处理，输出结果："
+cat testfile1 | sed ‘s/True/False/g’; echo -e "\n命令执行状态：$?"
+echo "___________________"
+
+echo "【场景5】打印文件内容，并进行了数据处理，但文件名输入错误，输出结果："
+cat testfile2 | sed ‘s/True/False/g’; echo -e "\n命令执行状态：$?"
+echo "___________________"
+
+rm -f testfile1
+```
 
 执行以上脚本结果如下：
 
-|                                                              |
-| :----------------------------------------------------------- |
-| 【场景4】打印文件内容，并进行了数据处理，输出结果：False命令执行状态码：**0**** **\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_【场景5】模拟场景4文件名称错误，输出结果：cat: testfile2: 没有那个文件或目录 命令执行状态码：**0** |
+```bash
+【场景4】打印文件内容，并进行了数据处理，输出结果：
+False
+命令执行状态码：0
+
+___________________
+【场景5】模拟场景4文件名称错误，输出结果：
+cat: testfile2: 没有那个文件或目录
+
+命令执行状态码：0
+```
 
  
 
@@ -97,15 +141,62 @@ l 测试脚本内容如下：
 
 使用目前较为流行的Shell开源测试框架 shUnit2 对1.1.1章节脚本中包含的命令进行测试，测试用例如下：
 
-|                                                              |
-| :----------------------------------------------------------- |
-| #! /bin/sh# file: examples/equality\_test.sh oneTimeSetUp() {  echo True > testfile1} # 用例1test1() {  assertTrue "cat testfile1 \| grep True"} # 用例2test2() {  assertFalse "cat testfile1 \| grep False"} # 用例3test3() {  assertFalse "cat testfile2 \| grep False"} # 用例4test4() {  assertTrue "cat testfile1 \| sed ‘s/True/False/g’"} # 用例5test5() {  assertTrue "cat testfile2 \| sed ‘s/True/False/g’"}  oneTimeTearDown() {   rm  testfile1} # Load and run shUnit2.. ../shunit2 |
+```bash
+#! /bin/sh
+# file: examples/equality_test.sh
+
+oneTimeSetUp() {
+  echo True > testfile1
+}
+
+# 用例1
+test1() {
+  assertTrue "cat testfile1 | grep True"
+}
+
+# 用例2
+test2() {
+  assertFalse "cat testfile1 | grep False"
+}
+
+# 用例3
+test3() {
+  assertFalse "cat testfile2 | grep False"
+}
+
+# 用例4
+test4() {
+  assertTrue "cat testfile1 | sed ‘s/True/False/g’"
+}
+
+# 用例5
+test5() {
+  assertTrue "cat testfile2 | sed ‘s/True/False/g’"
+}
+
+
+oneTimeTearDown() {
+
+  rm -f testfile1
+}
+
+# Load and run shUnit2.
+. ../shunit2
+```
 
 执行以上测试结果如下：
 
-|                                           |
-| :---------------------------------------- |
-| test1test2test3test4test5 Ran 5 tests. OK |
+```bash
+test1
+test2
+test3
+test4
+test5
+
+Ran 5 tests.
+
+OK
+```
 
 通过以上执行结果可以看到5条用例全部执行通过。但是【用例3】和【用例5】的执行结果是错误的，因为testfile2这个目录并不存在，这是一条异常命令，但用例的测试结果却是通过，这显然是一个无效测试。
 
@@ -113,27 +204,112 @@ l 测试脚本内容如下：
 
 使用另外一个热门 Shell 测试框架 bats 进行测试：
 
-|                                                              |
-| :----------------------------------------------------------- |
-| #!/usr/bin/env bats setup(){  echo True > testfile1} # 用例1\@test "test1" {  run cat testfile1 \| grep True  \[ $status -eq 0  ]} # 用例2\@test "test2" {  run cat testfile1 \| grep False  \[ $status -ne 0  ]} # 用例3\@test "test3" {  run cat testfile2 \| grep False  \[ $status -ne 0  ]} # 用例4\@test "test4" {  run cat testfile1 \| sed ‘s/True/False/g’  \[ $status -ne 0  ]} # 用例5\@test "test5" {  run cat testfile2 \| sed ‘s/True/False/g’  \[ $status -ne 0  ]} teardown(){    rm  testfile1} |
+```bash
+#!/usr/bin/env bats
+
+setup(){
+  echo True > testfile1
+}
+
+# 用例1
+@test "test1" {
+  run cat testfile1 | grep True
+  [ $status -eq 0  ]
+}
+
+# 用例2
+@test "test2" {
+  run cat testfile1 | grep False
+  [ $status -ne 0  ]
+}
+
+# 用例3
+@test "test3" {
+  run cat testfile2 | grep False
+  [ $status -ne 0  ]
+}
+
+# 用例4
+@test "test4" {
+  run cat testfile1 | sed ‘s/True/False/g’
+  [ $status -ne 0  ]
+}
+
+# 用例5
+@test "test5" {
+  run cat testfile2 | sed ‘s/True/False/g’
+  [ $status -ne 0  ]
+}
+
+teardown(){
+  
+  rm -f testfile1
+}
+```
 
 执行测试结果如下：
 
-|                                                              |
-| :----------------------------------------------------------- |
-| ✗ test1                                                                                                                                      (in test file test1.bats, line 11)                                                                                                               \`run cat testfile1 \| grep True' failed                                                                                                     ✗ test2                                                                                                                                    (in test file test1.bats, line 18)                                                                                                               \`run cat testfile1 \| grep False' failed                                                                                                    ✗ test3                                                                                                                                    (in test file test1.bats, line 25)                                                                                                               \`run cat testfile2 \| grep False' failed                                                                                                    ✗ test4                                                                                                                                   (in test file test1.bats, line 32)                                                                                                               \`\[ $status -eq 0  ]' failed with status 2                                                                                                                                                                  ✗ test5                                                                                                                                   (in test file test1.bats, line 38)                                                                                                               \`\[ $status -eq 0  ]' failed with status 2                                                                                                                                                                                                                                     5tests, 5 failures |
+```bash
+ ✗ test1                                                                                                                                   
+   (in test file test1.bats, line 11)                                                                                                          
+     `run cat testfile1 | grep True' failed                                                                                                    
+ ✗ test2                                                                                                                                 
+   (in test file test1.bats, line 18)                                                                                                          
+     `run cat testfile1 | grep False' failed                                                                                                   
+ ✗ test3                                                                                                                                 
+   (in test file test1.bats, line 25)                                                                                                          
+     `run cat testfile2 | grep False' failed                                                                                                   
+ ✗ test4                                                                                                                                
+   (in test file test1.bats, line 32)                                                                                                          
+     `[ $status -eq 0  ]' failed with status 2                                                                                                                                                                 
+ ✗ test5                                                                                                                                
+   (in test file test1.bats, line 38)                                                                                                          
+     `[ $status -eq 0  ]' failed with status 2                                                                                                  
+                                                                                                                                   
+5tests, 5 failures 
+```
 
 可以看到所有测试命令的结果均为失败，很明显测试命令中包含管道时，会影响框架对测试结果的判断，这里就限制了很多测试场景了，部分用例将命令状换后去掉管道再进行测试（用例4、用例5主要描述管道问题，由于无法使用，这里直接去掉）：
 
-|                                                              |
-| :----------------------------------------------------------- |
-| #!/usr/bin/env bats setup(){  echo True > testfile1} # 用例1\@test "test1" {  run grep True testfile1  \[ $status -eq 0  ]} # 用例2\@test "test2" {  run grep False testfile1  \[ $status -ne 0  ]} # 用例3\@test "test3" {  run grep False testfile2  \[ $status -ne 0  ]} teardown(){    rm  testfile1} |
+```bash
+#!/usr/bin/env bats
+
+setup(){
+  echo True > testfile1
+}
+
+# 用例1
+@test "test1" {
+  run grep True testfile1
+  [ $status -eq 0  ]
+}
+
+# 用例2
+@test "test2" {
+  run grep False testfile1
+  [ $status -ne 0  ]
+}
+
+# 用例3
+@test "test3" {
+  run grep False testfile2
+  [ $status -ne 0  ]
+}
+
+teardown(){  
+  rm -f testfile1
+}
+```
 
 运行结果如下：
 
-|                                             |
-| :------------------------------------------ |
-| ✓ test1 ✓ test2 ✓ test3 3 tests, 0 failures |
+```bash
+ ✓ test1
+ ✓ test2
+ ✓ test3
+
+3 tests, 0 failures 
+```
 
 现在可以测试成功了，但是和 shUnit2 测试框架一样，用例3的测试结果同样是错误的，未识别出异常命令。而且该框架测试场景也存在一定限制，在实际测试中使用管道的场景还是很多，比如数据的多重处理、需要人机交互的命令等，所以无法满足目前测试场景中复杂的变化。
 
@@ -147,21 +323,21 @@ l 测试脚本内容如下：
 
 **方案流程：**
 
-![](/一种针Linux系统异常命令的测试方法技术交底书_assets/wpseSjIhI.jpg) 
+![](../../public/一种针Linux系统异常命令的测试方法技术交底书_assets/wpseSjIhI.jpg) 
 
 图1 运行逻辑主流程
 
  
 
-![](/一种针Linux系统异常命令的测试方法技术交底书_assets/wpsWe2fyF.jpg) 
+![](../../public/一种针Linux系统异常命令的测试方法技术交底书_assets/wpsWe2fyF.jpg) 
 
 图2 运行逻辑子流程1
 
-![](/一种针Linux系统异常命令的测试方法技术交底书_assets/wpsGsUQOC.jpg) 
+![](../../public/一种针Linux系统异常命令的测试方法技术交底书_assets/wpsGsUQOC.jpg) 
 
 图3 运行逻辑子流程2
 
-![](/一种针Linux系统异常命令的测试方法技术交底书_assets/wpsOE8r5z.jpg) 
+![](../../public/一种针Linux系统异常命令的测试方法技术交底书_assets/wpsOE8r5z.jpg) 
 
 图4 运行逻辑子流程3
 
@@ -169,7 +345,7 @@ l 测试脚本内容如下：
 
  
 
-![](/一种针Linux系统异常命令的测试方法技术交底书_assets/wpsQBi6lx.jpg) 
+![](../../public/一种针Linux系统异常命令的测试方法技术交底书_assets/wpsQBi6lx.jpg) 
 
 图5 运行逻辑子流程4
 
@@ -373,17 +549,73 @@ _ _
 
 最后依然采用1.1.2章节的测试点进行实际验证，代码如下：
 
-|                                                              |
-| :----------------------------------------------------------- |
-| #! /bin/bash echo True > testfile1test1 () {  ......     # 省略部分为定义的用例标题、编号等  quiet "cat testfile1 \| grep True" "true" # 测试命令后传入参数"true/false"代表命令类型  Com1="${quiet\_s}" # 重新定义的状态码  Com2="${quiet\_r}" # 输出内容   Exp1="0"  Exp2="True"  assertEqual "${Com1}" "${Exp1}"  assertIn "${Exp2}" "${Com2}"} test2() {  ......  quiet "cat testfile1 \| grep False" "false"  Com1="${quiet\_s}"  Com2="${quiet\_r}"   Exp1="0"  Exp2=""  assertEqual "${Com1}" "${Exp1}"  assertEqual "${Exp2}" "${Com2}"} test3 () {  ......  quiet "cat testfile2 \| grep False" "true"  Com="${quiet\_s}"   Exp1="0"  Exp2=""  assertEqual "${Com1}" "${Exp1}"  assertEqual "${Exp2}" "${Com2}" } test4 () {  ......  quiet "cat testfile1 \| sed 's/True/False/g'" "true"  Com="${quiet\_r}"  Exp="False"  assertEqual "${Com}" "${Exp}"} test5 () {  ......  quiet "cat testfile2 \| sed 's/True/False/g'" "true"  Com="${quiet\_r}"  Exp="False"  assertEqual "${Com}" "${Exp}"} rm  testfile1 |
+```bash
+#! /bin/bash
+
+echo True > testfile1
+	
+test1 () {
+  ......     # 省略部分为定义的用例标题、编号等
+  quiet "cat testfile1 | grep True" "true" # 测试命令后传入参数"true/false"代表命令类型
+  Com1="${quiet_s}" # 重新定义的状态码
+  Com2="${quiet_r}" # 输出内容
+
+  Exp1="0"
+  Exp2="True"
+  assertEqual "${Com1}" "${Exp1}"
+  assertIn "${Exp2}" "${Com2}"
+}
+
+test2() {
+  ......
+  quiet "cat testfile1 | grep False" "false"
+  Com1="${quiet_s}"
+  Com2="${quiet_r}"
+
+  Exp1="0"
+  Exp2=""
+  assertEqual "${Com1}" "${Exp1}"
+  assertEqual "${Exp2}" "${Com2}"
+}
+
+test3 () {
+  ......
+  quiet "cat testfile2 | grep False" "true"
+  Com="${quiet_s}"
+
+  Exp1="0"
+  Exp2=""
+  assertEqual "${Com1}" "${Exp1}"
+  assertEqual "${Exp2}" "${Com2}"
+
+}
+
+test4 () {
+  ......
+  quiet "cat testfile1 | sed 's/True/False/g'" "true"
+  Com="${quiet_r}"
+  Exp="False"
+  assertEqual "${Com}" "${Exp}"
+}
+
+test5 () {
+  ......
+  quiet "cat testfile2 | sed 's/True/False/g'" "true"
+  Com="${quiet_r}"
+  Exp="False"
+  assertEqual "${Com}" "${Exp}"
+}
+
+rm -f testfile1
+```
 
 测试结果如下：
 
-![](/一种针Linux系统异常命令的测试方法技术交底书_assets/wpsLQg4Cu.jpg) 
+![](../../public/一种针Linux系统异常命令的测试方法技术交底书_assets/wpsLQg4Cu.jpg) 
 
 图6 实际验证结果
 
-    可以看到在1.1.2章节中测试无效的测试点，根据这套处理逻辑执行之后，能明显的识别出异常，规避了异常用例的测试结果为\`pass\`的问题。这里新增用例状态为\`error\`，快速的识别出了用例代码质量风险，代表用例中存在测试命令异常，该条用例需要重点检查，是测试环境变化导致，还是需求变更导致命令变化等。
+可以看到在1.1.2章节中测试无效的测试点，根据这套处理逻辑执行之后，能明显的识别出异常，规避了异常用例的测试结果为\`pass\`的问题。这里新增用例状态为\`error\`，快速的识别出了用例代码质量风险，代表用例中存在测试命令异常，该条用例需要重点检查，是测试环境变化导致，还是需求变更导致命令变化等。
 
 ### **2.3、本发明技术方案带来的有益效果**
 

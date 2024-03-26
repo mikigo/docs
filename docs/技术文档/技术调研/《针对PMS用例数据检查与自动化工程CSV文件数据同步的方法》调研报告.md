@@ -27,13 +27,13 @@ Author: 海针
 
 ​		在应用 `UI `自动化测试工程中每一个测试应用均存在一个或多个 `CSV` 文件，主要用于管理自动化测试用例，每一行数据代表一条测试用例：
 
-![](/Pictures/CSV文件列.png)
+![](../../public/针对PMS用例数据检查与自动化工程CSV文件数据同步的方法调研报告_assets/CSV文件列.png)
 
 <center>图1 CSV文件用例</center>
 
 ​		其中 `CSV` 文件中每一条用例都与 `PMS` 某一条用例存在关联关系，例如`图1`中用例 `id` 为1的自动化用例在 `PMS` 中展示：
 
-![](/Pictures/PMS用例示例.png)
+![](../../public/针对PMS用例数据检查与自动化工程CSV文件数据同步的方法调研报告_assets/PMS用例示例.png)
 
 <center>图2 CSV文件对应的PMS用例</center>
 
@@ -93,7 +93,7 @@ Author: 海针
 
 ​		针对上一章节提出的问题解决流程如下：
 
-![](/Pictures/解决流程.png)
+![](../../public/针对PMS用例数据检查与自动化工程CSV文件数据同步的方法调研报告_assets/解决流程.png)
 
 <center>图3 解决流程</center>
 
@@ -184,7 +184,7 @@ Author: 海针
 
 ​		**整体方案中执行流程设计方案如下：**
 
-![](../../public/Pictures/主流程.png)
+![](../../public../../public/针对PMS用例数据检查与自动化工程CSV文件数据同步的方法调研报告_assets/主流程.png)
 
  <center>图4 执行流程设计方案</center>
 
@@ -289,7 +289,7 @@ grand_search = 186
 
 * 设计流程为：
 
-![](../../public/Pictures/登录流程设计.png)
+![](../../public../../public/针对PMS用例数据检查与自动化工程CSV文件数据同步的方法调研报告_assets/登录流程设计.png)
 
  <center>图5 PMS 登录流程</center>
 
@@ -837,7 +837,7 @@ optional arguments:
 
 ​		**实验流程**
 
-![](../../public/Pictures/实验流程.png)
+![](../../public../../public/针对PMS用例数据检查与自动化工程CSV文件数据同步的方法调研报告_assets/实验流程.png)
 
  <center>图7 实验流程</center>
 
@@ -858,7 +858,7 @@ $ python3 -p app -o music -a all
 
 ​		等待任务完成，查看任务结果：
 
-![](../../public/Pictures/测试结果.png)
+![](../../public../../public/针对PMS用例数据检查与自动化工程CSV文件数据同步的方法调研报告_assets/测试结果.png)
 
  <center>图8 任务执行结果</center>
 
@@ -866,13 +866,13 @@ $ python3 -p app -o music -a all
 
 ​		任务执行结果归档文件中查看 `PMS` 数据检测结果：
 
-![](../../public/Pictures/数据检测示例.png)
+![](../../public../../public/针对PMS用例数据检查与自动化工程CSV文件数据同步的方法调研报告_assets/数据检测示例.png)
 
  <center>图9 PMS数据本地CSV文件</center>
 
 ​		进一步验证有效性，查看 `PMS` 项目管理工具 `WEB` 端数据，抽取`用例编号：635533` 用例进行验证：
 
-![](../../public/Pictures/PMS用例数据验证.png)
+![](../../public../../public/针对PMS用例数据检查与自动化工程CSV文件数据同步的方法调研报告_assets/PMS用例数据验证.png)
 
  <center>图10 PMS在线用例数据</center>
 
@@ -882,13 +882,13 @@ $ python3 -p app -o music -a all
 
 ​		检查备份文件与同步更新后文件差异性：
 
-![](../../public/Pictures/文件更新前后对比.png)
+![](../../public../../public/针对PMS用例数据检查与自动化工程CSV文件数据同步的方法调研报告_assets/文件更新前后对比.png)
 
  <center>图11 同步前后差异性对比</center>
 
 ​		进一步验证有效性，查看 `PMS` 项目管理工具 `WEB` 端数据，抽取以上`323行 - 325行` 数据验证：
 
-![](../../public/Pictures/PMS数据.png)
+![](../../public../../public/针对PMS用例数据检查与自动化工程CSV文件数据同步的方法调研报告_assets/PMS数据.png)
 
  <center>图12 PMS在线用例数据-标题</center>
 
@@ -960,7 +960,7 @@ response: <html><meta charset='utf-8'/><style>body{background:white}</style><scr
 
 ​		收集 `PMS` 修改的新用例数据与历史数据做对比：
 
-![](../../public/Pictures/PMS用例回填.png)
+![](../../public../../public/针对PMS用例数据检查与自动化工程CSV文件数据同步的方法调研报告_assets/PMS用例回填.png)
 
  <center>图13 调用 PMS 用例编辑接口修改数据前后对比图</center>
 
