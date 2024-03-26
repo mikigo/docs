@@ -12,3 +12,5 @@ bash env.sh
 pnpm run dev
 ```
 
+test
+
