@@ -1,0 +1,27 @@
+[
+  {
+    "text": "首页",
+    "link": "/index",
+    "activeMatch": "/index/"
+  },
+  {
+    "text": "自动化",
+    "link": "/自动化/自动化测试框架/Pytest从入门到起飞",
+    "activeMatch": "/自动化/"
+  },
+  {
+    "text": "编程基础",
+    "link": "/编程基础/Python/Python从进阶到高级—通俗易懂版",
+    "activeMatch": "/编程基础/"
+  },
+  {
+    "text": "技术文档",
+    "link": "/技术文档/专利交底书/一种定位目标图片坐标的图像识别技术交底书",
+    "activeMatch": "/技术文档/"
+  },
+  {
+    "text": "分享有趣",
+    "link": "/分享有趣/常见问题/Pycharm问题",
+    "activeMatch": "/分享有趣/"
+  }
+]
