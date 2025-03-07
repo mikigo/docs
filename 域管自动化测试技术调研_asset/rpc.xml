@@ -1,0 +1,111 @@
+<mxfile host="app.diagrams.net" modified="2024-04-11T04:03:42.078Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.61" etag="0RQkk8CrC_F3fQlDtdcc" version="23.1.1" type="device">
+  <diagram name="Page-1" id="74e2e168-ea6b-b213-b513-2b3c1d86103e">
+    <mxGraphModel dx="1434" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="77e6c97f196da883-1" value="YouQu 远程控制" style="swimlane;html=1;childLayout=stackLayout;startSize=20;rounded=0;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="158" y="30" width="780" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="77e6c97f196da883-2" value="Server" style="swimlane;html=1;startSize=20;" parent="77e6c97f196da883-1" vertex="1">
+          <mxGeometry y="20" width="430" height="730" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-18" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="77e6c97f196da883-2">
+          <mxGeometry x="20" y="90" width="382" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-19" value="YouQu" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="77e6c97f196da883-2">
+          <mxGeometry x="22" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-20" value="测试用例步骤远程控制" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="77e6c97f196da883-2">
+          <mxGeometry x="50" y="120" width="125" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-15" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="77e6c97f196da883-2" source="ILGppoDER6upUz8J5U66-20" target="ILGppoDER6upUz8J5U66-36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="118" as="sourcePoint" />
+            <mxPoint x="175" y="238" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-21" value="RPC 请求" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILGppoDER6upUz8J5U66-15">
+          <mxGeometry x="-0.1202" relative="1" as="geometry">
+            <mxPoint x="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="77e6c97f196da883-2" source="ILGppoDER6upUz8J5U66-36" target="ILGppoDER6upUz8J5U66-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-46" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILGppoDER6upUz8J5U66-44">
+          <mxGeometry x="-0.1852" y="2" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-36" value="判断远程是否&lt;br&gt;启动RPC服务" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="77e6c97f196da883-2">
+          <mxGeometry x="42.5" y="260" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-43" value="1、发送代码到远程Client&lt;br&gt;2、部署YouQu环境&lt;br&gt;3、启动RPC服务" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="77e6c97f196da883-2">
+          <mxGeometry x="250" y="266" width="140" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="77e6c97f196da883-2" source="ILGppoDER6upUz8J5U66-36" target="ILGppoDER6upUz8J5U66-49">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="273" y="390" as="sourcePoint" />
+            <mxPoint x="272.5" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="77e6c97f196da883-2" source="ILGppoDER6upUz8J5U66-49" target="ILGppoDER6upUz8J5U66-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-49" value="RPC Client 请求" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="77e6c97f196da883-2">
+          <mxGeometry x="50.5" y="390" width="125" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-57" value="下一个用例步骤" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="77e6c97f196da883-2">
+          <mxGeometry x="50.5" y="500" width="125" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="77e6c97f196da883-3" value="Client" style="swimlane;html=1;startSize=20;" parent="77e6c97f196da883-1" vertex="1">
+          <mxGeometry x="430" y="20" width="350" height="730" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-59" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=15;align=center;dashed=1;" vertex="1" parent="77e6c97f196da883-3">
+          <mxGeometry x="75" y="220" width="255" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-1" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=15;align=center;dashed=1;" vertex="1" parent="77e6c97f196da883-3">
+          <mxGeometry x="120" y="260" width="190" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-2" value="RPC Services" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="77e6c97f196da883-3">
+          <mxGeometry x="120" y="270" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-3" value="Src注册到PRC服务" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="77e6c97f196da883-3">
+          <mxGeometry x="157.5" y="330" width="115" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-4" value="YouQu" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="77e6c97f196da883-3">
+          <mxGeometry x="157.5" y="340" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-60" value="Client PC" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="77e6c97f196da883-3">
+          <mxGeometry x="82" y="230" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-52" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.503;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="77e6c97f196da883-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="178" y="441" as="sourcePoint" />
+            <mxPoint x="548" y="440.96000000000004" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-54" value="RPC 请求" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILGppoDER6upUz8J5U66-52">
+          <mxGeometry x="-0.0811" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.032;entryY=0.125;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="77e6c97f196da883-1" source="ILGppoDER6upUz8J5U66-43" target="ILGppoDER6upUz8J5U66-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-55" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" target="ILGppoDER6upUz8J5U66-49">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="491" as="sourcePoint" />
+            <mxPoint x="570" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ILGppoDER6upUz8J5U66-56" value="RPC 响应" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILGppoDER6upUz8J5U66-55">
+          <mxGeometry x="0.1132" y="1" relative="1" as="geometry">
+            <mxPoint x="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
