@@ -4,8 +4,10 @@ pageType: home
 
 hero:
   name: mikigo`s docs
-  text: "记录、分享、成长"
-  tagline: 为天地立心, 为生民立命, 为往圣继绝学, 为万世开太平
+  text: |
+    记录美好生活
+    发现不一样的自己
+  tagline: 三更灯火五更鸡， 正是男儿读书时
   image:
       src: /logo.png
       alt: mikigo

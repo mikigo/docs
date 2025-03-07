@@ -1,0 +1,37 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "章节预览"
+  },
+  {
+    "type": "dir",
+    "name": "Python",
+    "label": "Python"
+  },
+  {
+    "type": "dir",
+    "name": "Linux",
+    "label": "Linux"
+  },
+  {
+    "type": "dir",
+    "name": "Shell",
+    "label": "Shell"
+  },
+  {
+    "type": "dir",
+    "name": "前后端",
+    "label": "前后端"
+  },
+  {
+    "type": "dir",
+    "name": "Jenkins",
+    "label": "Jenkins"
+  },
+  {
+    "type": "dir",
+    "name": "网络爬虫",
+    "label": "网络爬虫"
+  }
+]

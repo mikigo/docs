@@ -1,0 +1,18 @@
+.rspress-home-hero-text {
+  max-width: var(--rp-home-hero-text-max-width);
+}
+
+
+h1 {
+    background: var(--rp-home-hero-name-background);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    background: var(--rp-home-hero-name-background);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

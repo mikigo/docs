@@ -1,0 +1,32 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "章节预览"
+  },
+  {
+    "type": "dir",
+    "name": "自动化测试框架",
+    "label": "自动化测试框架"
+  },
+  {
+    "type": "dir",
+    "name": "UI自动化",
+    "label": "UI自动化"
+  },
+  {
+    "type": "dir",
+    "name": "性能自动化",
+    "label": "性能自动化"
+  },
+  {
+    "type": "dir",
+    "name": "接口自动化",
+    "label": "接口自动化"
+  },
+  {
+    "type": "dir",
+    "name": "自动化思想理念",
+    "label": "自动化思想理念"
+  }
+]

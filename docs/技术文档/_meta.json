@@ -1,0 +1,22 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "章节预览"
+  },
+  {
+    "type": "dir",
+    "name": "专利交底书",
+    "label": "专利交底书"
+  },
+  {
+    "type": "dir",
+    "name": "技术调研",
+    "label": "技术调研"
+  },
+  {
+    "type": "dir",
+    "name": "根因分析",
+    "label": "根因分析"
+  }
+]

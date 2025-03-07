@@ -11,17 +11,30 @@ export default defineConfig({
   logoText: 'docs',
   themeConfig: {
     enableContentAnimation: true,
-    enableAppearanceAnimation: false,
+    enableAppearanceAnimation: true,
+    enableScrollToTop: true,
     footer: {
-      message: '© 2020 mikigo. All Rights Reserved.',
+      message: `版权所有 © 2020-${new Date().getFullYear()} mikigo`,
     },
     hideNavbar: 'auto',
     outlineTitle: '本页目录',
+    prevPageText: '上一页',
+    nextPageText: '下一页',
     socialLinks: [
       {
         icon: 'github',
         mode: 'link',
         content: 'https://github.com/mikigo/docs',
+      },
+      {
+        icon: 'wechat',
+        mode: 'text',
+        content: 'mikigo_18782963750',
+      },
+      {
+        icon: 'qq',
+        mode: 'text',
+        content: '1964191631',
       }
     ],
   },

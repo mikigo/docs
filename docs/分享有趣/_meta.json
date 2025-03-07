@@ -1,0 +1,22 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "章节预览"
+  },
+  {
+    "type": "dir",
+    "name": "常见问题",
+    "label": "常见问题"
+  },
+  {
+    "type": "dir",
+    "name": "经验总结",
+    "label": "经验总结"
+  },
+  {
+    "type": "dir",
+    "name": "读书笔记",
+    "label": "读书笔记"
+  }
+]
