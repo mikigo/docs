@@ -1,14 +1,13 @@
 import { defineConfig } from 'rspress/config';
 
 export default defineConfig({
-  // 文档根目录
   root: 'docs',
   base: '/',
   title: 'mikigo`s docs',
   description: 'mikigo`s docs',
   icon: '/favicon.ico',
   logo: '/logo.png',
-  logoText: 'docs',
+  logoText: 'mikigo',
   themeConfig: {
     enableContentAnimation: true,
     enableAppearanceAnimation: true,
@@ -17,9 +16,15 @@ export default defineConfig({
       message: `版权所有 © 2020-${new Date().getFullYear()} mikigo`,
     },
     hideNavbar: 'auto',
+
     outlineTitle: '本页目录',
     prevPageText: '上一页',
     nextPageText: '下一页',
+    overview: {
+      filterNameText: '快速查找',
+      filterPlaceholderText: '输入关键词',
+      filterNoResultText: '未查询到结果',
+    },
     socialLinks: [
       {
         icon: 'github',

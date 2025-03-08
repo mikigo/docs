@@ -5,23 +5,28 @@
     "activeMatch": "/index/"
   },
   {
-    "text": "自动化技术",
+    "text": "\uD83E\uDD16自动化技术",
     "link": "/自动化技术/index",
     "activeMatch": "/自动化技术/"
   },
   {
-    "text": "编程基础",
+    "text": "\uD83D\uDCBB编程基础",
     "link": "/编程基础/index",
     "activeMatch": "/编程基础/"
   },
   {
-    "text": "技术文档",
+    "text": "\uD83D\uDCDA技术文档",
     "link": "/技术文档/index",
     "activeMatch": "/技术文档/"
   },
   {
-    "text": "分享有趣",
+    "text": "\uD83D\uDE46\u200D♂\uFE0F分享有趣",
     "link": "/分享有趣/index",
+    "activeMatch": "/分享有趣/"
+  },
+  {
+    "text": "\uD83D\uDCF0博客",
+    "link": "/博客/index",
     "activeMatch": "/分享有趣/"
   }
 ]

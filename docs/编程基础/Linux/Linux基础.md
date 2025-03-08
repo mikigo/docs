@@ -4,8 +4,6 @@ Author: mikigo
 
 # Linux&Shell基础
 
-
-
 ## linux基础命令
 
 ### 用户与身份

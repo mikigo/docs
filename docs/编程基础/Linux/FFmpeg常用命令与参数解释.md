@@ -2,12 +2,13 @@
 Author: 禄烨
 ---
 
+# FFmpeg常用命令与参数解释
+
 ## FFmpeg 概述
 
 FFmpeg 是一个极为强大且广泛使用的开源计算机程序，专为处理多媒体文件（包括音频、视频）而设计。它是快速前进（FastForward）MPEG 的缩写，强调了其在多媒体处理方面的高效性。FFmpeg 的核心功能围绕着音视频的记录、转换、解码、编码以及流化，提供了一个全面的解决方案。
 
 [官方文档：https://ffmpeg.org/](https://ffmpeg.org/)
-
 
 
 ## FFmpeg 常用参数释义
