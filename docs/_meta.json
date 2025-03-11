@@ -28,5 +28,9 @@
     "text": "\uD83D\uDCCB博客",
     "link": "/博客/index",
     "activeMatch": "/博客/"
+  },
+  {
+    "text": "\uD83D\uDDC3\uFE0FFileServer",
+    "link": "https://zeng-yi.com:5000"
   }
 ]
