@@ -30,6 +30,11 @@
     "activeMatch": "/博客/"
   },
   {
+    "text": "\uD83E\uDDD1\u200D\uD83C\uDF73菜谱",
+    "link": "/cookbook/index",
+    "activeMatch": "/cookbook/"
+  },
+  {
     "text": "\uD83D\uDDC3\uFE0F其他",
     "items": [
       {

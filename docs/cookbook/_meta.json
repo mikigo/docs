@@ -1,0 +1,12 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "菜谱"
+  },
+  {
+    "type": "dir",
+    "name": "特色菜",
+    "label": "特色菜"
+  }
+]
