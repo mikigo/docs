@@ -30,7 +30,16 @@
     "activeMatch": "/博客/"
   },
   {
-    "text": "\uD83D\uDDC3\uFE0FFileServer",
-    "link": "https://zeng-yi.com:5000"
+    "text": "\uD83D\uDDC3\uFE0F其他",
+    "items": [
+      {
+        "text": "My FileServer",
+        "link": "https://zeng-yi.com:5000"
+      },
+      {
+        "text": "YouQu框架生态",
+        "link": "https://youqu.uniontech.com"
+      }
+    ]
   }
 ]

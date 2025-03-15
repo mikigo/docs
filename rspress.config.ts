@@ -35,11 +35,6 @@ export default defineConfig({
         icon: 'wechat',
         mode: 'text',
         content: 'mikigo_18782963750',
-      },
-      {
-        icon: 'qq',
-        mode: 'text',
-        content: '1964191631',
       }
     ],
   },
