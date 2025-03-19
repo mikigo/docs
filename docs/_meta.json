@@ -6,23 +6,23 @@
   },
   {
     "text": "\uD83E\uDD16自动化技术",
-    "link": "/自动化技术/index",
-    "activeMatch": "/自动化技术/"
+    "link": "/autotest/index",
+    "activeMatch": "/autotest/"
   },
   {
     "text": "\uD83D\uDCBB编程基础",
-    "link": "/编程基础/index",
-    "activeMatch": "/编程基础/"
+    "link": "/program/index",
+    "activeMatch": "/program/"
   },
   {
     "text": "\uD83D\uDCDA技术文档",
-    "link": "/技术文档/index",
-    "activeMatch": "/技术文档/"
+    "link": "/tech_doc/index",
+    "activeMatch": "/tech_doc/"
   },
   {
     "text": "\uD83D\uDCCB博客",
-    "link": "/博客/index",
-    "activeMatch": "/博客/"
+    "link": "/blog/index",
+    "activeMatch": "/blog/"
   },
   {
     "text": "\uD83E\uDDD1\u200D\uD83C\uDF73菜谱",
