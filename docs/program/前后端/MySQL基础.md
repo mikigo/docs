@@ -4,8 +4,6 @@ Author: mikigo
 
 ## MySQL基础
 
-
-
 ## 一、数据库基础
 
 ### 1、数据库概述
@@ -27,33 +25,26 @@ Author: mikigo
 - 属性（对实体的描述）
 
 - 码：
-
+  
   - 超码：能够唯一确定的一个实体的一个或多个属性的集合。
 
+- 候选码：能够确定一个实体的多个属性。
 
-  - 候选码：能够确定一个实体的多个属性。
-
-
-  - 主码：能够唯一确定的一个实体的属性。
-
+- 主码：能够唯一确定的一个实体的属性。
 
 - 实体型和实体集：课程（课程号、课程名）就是一个实体型，所有课程组成一个实体集。
 
 - 联系
-
+  
   - 一对一（`1:1`）
 
+- 一对多（`1：n`）
 
-  - 一对多（`1：n`）
-
-
-  - 多对多（`m：n`）
-
+- 多对多（`m：n`）
 
 ④ E-R模型和E-R图
 
 - 用矩形表示实体，用椭圆表示属性，用菱形表示关系，用直线连接。
-
 
 ### 3、数据模型
 
@@ -65,7 +56,6 @@ Author: mikigo
 
 - 便于在计算机上实现；
 
-
 ② 数据模型的组成要素
 
 - 数据结构（静态特性的描述）
@@ -74,55 +64,46 @@ Author: mikigo
 
 - 完整性约束条件
 
-
 ③ 常见的数据模型
 
 - 层次模型
-
+  
   - 定义：用树型结构表示实体之间的联系的模型
 
-
-  - 特点：在一个层次模型中的限制条件是：有且仅有一个节点，无父节点，此节点为树的根；其他节点有且仅有一个父节点。
-
+- 特点：在一个层次模型中的限制条件是：有且仅有一个节点，无父节点，此节点为树的根；其他节点有且仅有一个父节点。
 
 - 网状模型
-
+  
   - 定义：用网络结构表示实体类型及其实体之间联系的模型
 
-
-  - 特点：
-
-    - 允许一个以上的节点无父节点
-
-    - 一个节点可以有多于一个父节点
+- 特点：
+  
+  - 允许一个以上的节点无父节点
+  
+  - 一个节点可以有多于一个父节点
 
 - 关系模型
-
+  
   - 定义：用二维表的形式表示实体和实体之间联系的数据模型
 
+- 特点：
+  
+  - 数据结构简单（二维表）
+  
+  - 扎实的理论基础：
 
-  - 特点：
+- 关系运算理论
 
-    - 数据结构简单（二维表）
+- 关系模式设计理论
 
-    - 扎实的理论基础：
-
-  - 关系运算理论
-
-
-  - 关系模式设计理论
-
-
-  - 关系数据模型的三种约束完整性
-
-    - 实体完整性：实体的主键不能取空值。
-
+- 关系数据模型的三种约束完整性
+  
+  - 实体完整性：实体的主键不能取空值。
 
     - 参照完整性：是指参照关系中每个元素的外码要么为空(NULL)，要么等于被参照关系中某个元素的主码。
-
-
+    
+    
     - 用户定义完整性：指对关系中每个属性的取值作一个限制(或称为约束)的具体定义。比如 性别属性只能取”男“或”女“ ，再就是年龄的取值范围，可以取值0-130 ，但不能取负数，因为年龄不可能是负数。
-
 
 ## 二、MySQL基本知识
 
@@ -140,7 +121,6 @@ Author: mikigo
 
 - 跨平台使用
 
-
 ### 2.MySQL的安装
 
 (1) `MySQL`为免费开源，可以在官网下载安装；`Github` 链接：https://github.com/mysql/mysql-server
@@ -153,17 +133,30 @@ Author: mikigo
 
 ### 3.远程访问数据库
 
-(1) 服务器端需要授权：`MySQL`查询编辑上输入：
+- 初始化 root 密码
+  
+  ```bash
+  sudo mysql -u root
+  ```
+  
+  ```sql
+  ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+  
+  FLUSH PRIVILEGES;
+  ```
 
-```sql
-grant all privileges on*.*to’用户名’@’%’ identified by’密码’ with grant option;
-```
+- 服务器端需要授权：`MySQL`查询编辑上输入：
+  
+  ```sql
+  grant all privileges on*.*to’用户名’@’%’ identified by’密码’ with grant option;
+  FLUSH PRIVILEGES;
+  
+  # %，是指对所有人，如果是针对某个人，可替换为对应的 IP
+  ```
 
-`%`，是指对所有人，如果是针对某个人，可替换为对应的 `IP`
-
-(2) 关闭防火墙
-
-(3) `Flush privileges`（刷新权限）
+- 关闭防火墙
+  
+  
 
 ### 4.MySQL系统数据简介
 
@@ -184,16 +177,23 @@ grant all privileges on*.*to’用户名’@’%’ identified by’密码’ wi
 (3) 数据库的基本操作
 
 - `create database dbname;`（创建数据库）
+
 - `Drop database dbname;`（删除数据库）
+
 - `Create table name;`（创建表）
+
 - `Varchar(5)` 长度为5个字符以内
+
 - Primary key`（主键）
 
 - Not null`（不能为空）
 
 - `Create database dbname default character set utf8 collate utf8_general_ci;` (创建一个字符集为utf8的数据库，否则输入汉字时，会变成问号）
+
 - `Create database test` ：代表的是创建数据库 test；
+
 - `default character set utf8` ：代表的是将默认编码格式设置为utf8格式；
+
 - `collate utf8_general_ci` ：代表的是数据库校对规则；
 
 ## 三、数据库基本操作
@@ -208,7 +208,6 @@ grant all privileges on*.*to’用户名’@’%’ identified by’密码’ wi
 
 - 有一个唯一的主键，主键不能为空。
 
-
 （2）外键：两个实体中的主键，在关系表中成为外键。
 
 （3）索引（`index`）：根据指定的数据库表列建立起来的顺序；它提供了快速访问数据的途径。索引所指向的列中的数据不重复。
@@ -222,48 +221,45 @@ grant all privileges on*.*to’用户名’@’%’ identified by’密码’ wi
 ### 2.表约束
 
 - 主键约束（`primary key`）
-
+  
   - 一个表通过一个列或多个列组合的数据来唯一标识表总的每一行，这一列或多个列的组合成为主键。
-
+    
     - 主键列具有唯一性；
 
-
     - 一个表只有一个主键；
-
-
+    
+    
     - `MySQL` 通过主键建议唯一索引，加快对主键的查询速度；
 
-  - 主键约束两种写法
-
-    - 列级约束：直接在字段后定义 `primary key`；
-
-      ```sql
-      Create table mikigo (
-      m_name primary key
-      );
-      ```
-
-    - 表级约束：先写完表，再定义表里的 `primary key`；
-
-      ```sql
-      Create table mikigo (
-      m_name varchar(6),
-      m_id varchar(11),
-      Constraint pk_id primary key(m_id)
-      );
-      ```
+- 主键约束两种写法
+  
+  - 列级约束：直接在字段后定义 `primary key`；
+    
+    ```sql
+    Create table mikigo (
+    m_name primary key
+    );
+    ```
+  
+  - 表级约束：先写完表，再定义表里的 `primary key`；
+    
+    ```sql
+    Create table mikigo (
+    m_name varchar(6),
+    m_id varchar(11),
+    Constraint pk_id primary key(m_id)
+    );
+    ```
 
 - 外键约束（`foreign`）
-
+  
   定义：建立和强调两个表之间的关系，即关系表的一个列与另一个表中的具有唯一性的列相关，这个列就是关系表中的外键。
 
 - 唯一性约束（`unique`）
-
+  
   - 保证在非主键的指定唯一性的列上不会出现重复的数据（在学生表中指定了学好为主键，身份证列作为非主键建立唯一性约束，则身份证号不能重复）；
 
-
-  - 唯一性约束可以建立在多个非主键的列上，而且允许为空值（和主键约束的区别）；
-
+- 唯一性约束可以建立在多个非主键的列上，而且允许为空值（和主键约束的区别）；
 
 - 检查约束（`check`）：在 `MySQL` 上没有用；
 
@@ -282,7 +278,6 @@ SQL（structrued query language）查询语句包含四类：
 - 数据控制语言（`DCL`,data control language）
 
 - 系统存储语言（System Stored procedure）
-
 
 #### 3.1.数据定义语言
 
@@ -329,25 +324,25 @@ Where sno=101
 （9）alter table修改表
 
 - 修改表名：`Alter table 原表名 rename to 目标表名`
-
+  
   ```sql
   Alter table student rename to student_1
   ```
 
 - 新增字段：`Alter table 表名 add 字段名 varchar(50) null`
-
+  
   ```sql
   Alter table student add pass_or_not varchar（50）
   ```
 
 - 修改字段属性：`Alter table 表名 change 原字段名 新字段名 varchar(4)`
-
+  
   ```sql
    Alter table student change sno sno varchar(4) primary key
   ```
 
 - 删除字段：`alter table 表名 drop column 字段名`
-
+  
   ```sql
    Alter table student drop column pass_or_not
   ```
@@ -516,27 +511,27 @@ where tno in(select tno from teacherwhere depart ='电子工程系'));
 ③联接查询
 
 - 内连接
-
+  
   ```sql
   from student inner join score on student.sno=score.sno
   ```
-
+  
   或
-
+  
   ```sql
   Where student.sno=score.sno
   ```
 
 - 外连接
-
+  
   - 左联接：（以左边表为基准，左边所有数据要出现，右边表无数据的，为空值）
-
+    
     ```sql
     from course left join score on course.cno=score.cno 
     ```
-
+  
   - 右联接： (以右边表为基准，右边所有数据要出现，左边表无数据的，为空值）
-
+    
     ```sql
     from course right join score on course.cno=score.cno
     ```
@@ -592,7 +587,7 @@ Where ssex=’男’
 - 点击函数右键，选择新建函数，输入定义模式、参数名、数据类型；
 
 - 点击完成，在 `begin` 和 `end` 之间存储过程语句，点击保存，设置过程名；
-
+  
   ```sql
   Begin
   While i<30 do
@@ -601,7 +596,7 @@ Where ssex=’男’
   End while;
   End
   ```
-
+  
   调用的使用：`call` 过程名（赋值）；
 
 #### 3.6.trigger 触发器
