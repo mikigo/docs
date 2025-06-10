@@ -1,13 +1,15 @@
 import { defineConfig } from 'rspress/config';
+import path from "node:path";
 
 export default defineConfig({
+  globalStyles: path.join(__dirname, 'theme/var.css'),
   root: 'docs',
   base: '/',
   title: 'mikigo`s docs',
   description: 'mikigo`s docs',
   icon: '/favicon.ico',
   logo: '/logo.png',
-  logoText: 'mikigo',
+  logoText: 'mikigo`s docs',
   themeConfig: {
     enableContentAnimation: true,
     enableAppearanceAnimation: true,
@@ -15,7 +17,7 @@ export default defineConfig({
     lastUpdated: true,
 
     footer: {
-      message: `版权所有 © 2020-${new Date().getFullYear()} mikigo`,
+      message: `蜀ICP备2024104386号 版权所有 © 2020-${new Date().getFullYear()} mikigo`,
     },
     hideNavbar: 'auto',
 
