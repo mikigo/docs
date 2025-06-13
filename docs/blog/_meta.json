@@ -8,12 +8,14 @@
     "type": "dir",
     "name": "2025",
     "label": "2025",
-    "collapsed": true
+    "collapsed": true,
+    "overviewHeaders": [1]
   },
   {
     "type": "dir",
     "name": "2024",
     "label": "2024",
-    "collapsed": true
+    "collapsed": true,
+    "overviewHeaders": [1]
   }
 ]
