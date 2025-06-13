@@ -5,22 +5,12 @@
     "activeMatch": "/index/"
   },
   {
-    "text": "\uD83E\uDD16自动化技术",
-    "link": "/autotest/index",
-    "activeMatch": "/autotest/"
-  },
-  {
-    "text": "\uD83D\uDCBB编程基础",
+    "text": "\uD83D\uDCBB编程",
     "link": "/program/index",
     "activeMatch": "/program/"
   },
   {
-    "text": "\uD83D\uDCDA技术文档",
-    "link": "/tech_doc/index",
-    "activeMatch": "/tech_doc/"
-  },
-  {
-    "text": "\uD83D\uDCCB博客",
+    "text": "✍\uFE0F博客",
     "link": "/blog/index",
     "activeMatch": "/blog/"
   },
@@ -30,16 +20,8 @@
     "activeMatch": "/cookbook/"
   },
   {
-    "text": "\uD83D\uDDC3\uFE0F其他",
-    "items": [
-      {
-        "text": "FileServer",
-        "link": "https://zeng-yi.com:5000"
-      },
-      {
-        "text": "YouQu框架生态",
-        "link": "https://youqu.uniontech.com"
-      }
-    ]
+    "text": "\uD83E\uDD77关于",
+    "link": "about",
+    "activeMatch": "/about/"
   }
 ]

@@ -6,32 +6,50 @@
   },
   {
     "type": "dir",
+    "name": "autotest",
+    "label": "自动化测试",
+    "collapsed": true
+  },
+  {
+    "type": "dir",
     "name": "Python",
-    "label": "Python"
+    "label": "Python",
+    "collapsed": true
   },
   {
     "type": "dir",
     "name": "Linux",
-    "label": "Linux"
+    "label": "Linux",
+    "collapsed": true
   },
   {
     "type": "dir",
     "name": "Shell",
-    "label": "Shell"
+    "label": "Shell",
+    "collapsed": true
   },
   {
     "type": "dir",
     "name": "前后端",
-    "label": "前后端"
+    "label": "前后端",
+    "collapsed": true
   },
   {
     "type": "dir",
     "name": "Jenkins",
-    "label": "Jenkins"
+    "label": "Jenkins",
+    "collapsed": true
   },
   {
     "type": "dir",
     "name": "网络爬虫",
-    "label": "网络爬虫"
+    "label": "网络爬虫",
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "tech_doc",
+    "label": "技术文档",
+    "collapsed": true
   }
 ]

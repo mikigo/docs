@@ -1,10 +1,5 @@
 [
   {
-    "type": "file",
-    "name": "index",
-    "label": "章节预览"
-  },
-  {
     "type": "dir",
     "name": "自动化测试框架",
     "label": "自动化测试框架"

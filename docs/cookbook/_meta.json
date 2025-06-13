@@ -7,16 +7,19 @@
   {
     "type": "dir",
     "name": "特色菜",
-    "label": "特色菜"
+    "label": "特色菜",
+    "collapsed": true
   },
   {
     "type": "dir",
     "name": "家常菜",
-    "label": "家常菜"
+    "label": "家常菜",
+    "collapsed": true
   },
   {
     "type": "dir",
     "name": "营养汤",
-    "label": "营养汤"
+    "label": "营养汤",
+    "collapsed": true
   }
 ]
