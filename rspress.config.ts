@@ -35,12 +35,7 @@ export default defineConfig({
       {
         icon: 'github',
         mode: 'link',
-        content: 'https://github.com/mikigo/https://github.com/mikigo/mikigo.github.io',
-      },
-      {
-        icon: 'wechat',
-        mode: 'text',
-        content: 'mikigo_18782963750',
+        content: 'https://github.com/mikigo/mikigo.github.io',
       }
     ],
   },
