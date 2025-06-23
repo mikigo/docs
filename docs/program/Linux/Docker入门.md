@@ -215,12 +215,37 @@ $ sudo docker exec -it python311 /bin/bash
 root@9b4b3dc24c32:/#
 ```
 
-注意，使用 exit 退出容器，容器不会停止；
+注意，使用 exit **退出容器，容器不会停止**；
+
+3、挂载目录
+
+```python
+sudo docker exec -it -v ~/Desktop/tr:/app --name python311 /bin/bash
+```
 
 ### 删除容器
 
 ```shell
 sudo docker rm 容器名/镜像名
+```
+
+## 迁移 Docker 容器到另一台服务器
+
+```bash
+# 1. 将当前容器提交为新的镜像
+sudo docker commit <容器名或ID> my_python_app
+
+# 2. 导出镜像为tar文件
+sudo docker save my_python_app > my_python_app.tar
+
+# 3. 将tar文件传输到新服务器
+sudo scp my_python_app.tar user@new-server:/path/to/destination/
+
+# 4. 在新服务器上加载镜像
+sudo docker load < my_python_app.tar
+
+# 5. 运行容器
+sudo docker run -it --name new_python_app my_python_app /bin/bas
 ```
 
 ## Pycharm 配置 Docker 容器内 Python 环境
