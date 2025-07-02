@@ -6,11 +6,19 @@ const myStyle = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  color: "grey",
 }
 
 const Layout = () => (
   <Theme.Layout
-    afterFeatures={<div align="center" style={myStyle}>本站总访问量:<img src="https://w.saobby.com/w/dbbsuky7" alt="访问统计"/></div>}
+    afterFeatures={
+      <div
+          align="center"
+          style={myStyle}
+      >
+        本站总访问量：<img src="https://w.saobby.com/w/dbbsuky7" alt="访问统计" width="35"/>
+      </div>
+    }
   />
 );
 
