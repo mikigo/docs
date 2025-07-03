@@ -16,7 +16,7 @@ const Layout = () => (
           align="center"
           style={myStyle}
       >
-        本站总访问量：<img src="https://w.saobby.com/w/dbbsuky7" alt="访问统计" width="35"/>
+        <img src="https://count.getloli.com/@mikigo?name=mikigo&theme=3d-num&padding=7&offset=0&align=center&scale=1&pixelated=1&darkmode=auto" alt="访问统计"/>
       </div>
     }
   />
