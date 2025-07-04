@@ -17,7 +17,12 @@ export default defineConfig({
     lastUpdated: true,
 
     footer: {
-      message: `蜀ICP备2024104386号 版权所有 © 2020-${new Date().getFullYear()} mikigo`,
+      message: `
+        蜀ICP备2024104386号 版权所有 © 2020-${new Date().getFullYear()} mikigo
+        <span style="display: inline-flex; align-items: center;">
+          | 访问量：<img src="https://w.saobby.com/w/dbbsuky7" alt="访问统计" width="25" style="vertical-align: middle;"/>
+        </span>
+      `,
     },
     hideNavbar: 'auto',
 
